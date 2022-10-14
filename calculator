@@ -1,0 +1,18 @@
+# Our first program to calculate finances
+
+print("How much money do you make in a year? ") # Get income
+income = int(input())
+
+print("How much do you spend per month in rent? ") # Get rent fees.
+rent = int(input())
+yearlyRent = rent * 12
+
+print("How much money do you want to save per year? ")
+savings = int(input())
+
+moneyAvailable = income - yearlyRent - savings
+moneyWeekly = moneyAvailable / 53 # How much money you can spend per week
+moneyMonthly = moneyAvailable / 12
+
+print(f"You can spend ${moneyAvailable} this year if you want to save ${savings} this year. ")
+print(f"This roughly translates to spending ${round(moneyWeekly, 2)} a week, or ${round(moneyMonthly, 2)} a month.")
